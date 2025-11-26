@@ -3,7 +3,7 @@ package dispatcher_test
 import (
 	"testing"
 
-	. "github.com/ufy-it/go-telegram-bot/dispatcher"
+	. "github.com/volodymyr-tkachuk-personal/go-telegram-bot/dispatcher"
 )
 
 func TestEmptyGlobalMessageFunc(t *testing.T) {

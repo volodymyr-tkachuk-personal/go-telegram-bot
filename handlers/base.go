@@ -7,9 +7,9 @@ import (
 	"fmt"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
-	"github.com/ufy-it/go-telegram-bot/handlers/readers"
-	"github.com/ufy-it/go-telegram-bot/logger"
-	"github.com/ufy-it/go-telegram-bot/state"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/readers"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/logger"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/state"
 )
 
 type HandlerContextVariables string

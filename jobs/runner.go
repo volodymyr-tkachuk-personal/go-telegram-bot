@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/ufy-it/go-telegram-bot/handlers/buttons"
-	"github.com/ufy-it/go-telegram-bot/logger"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/buttons"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/logger"
 )
 
 // Messager is an interface for an object that can send a text message to a chat. In production it should be a Dispatcher object

@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ufy-it/go-telegram-bot/handlers"
-	"github.com/ufy-it/go-telegram-bot/handlers/readers"
-	"github.com/ufy-it/go-telegram-bot/state"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/readers"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/state"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )

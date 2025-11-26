@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ufy-it/go-telegram-bot/handlers/buttons"
-	"github.com/ufy-it/go-telegram-bot/jobs"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/buttons"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/jobs"
 )
 
 type mockMessage struct {

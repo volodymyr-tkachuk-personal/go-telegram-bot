@@ -1,4 +1,4 @@
-module github.com/ufy-it/go-telegram-bot
+module github.com/volodymyr-tkachuk-personal/go-telegram-bot
 go 1.25
 
 require (

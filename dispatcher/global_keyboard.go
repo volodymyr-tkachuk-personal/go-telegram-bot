@@ -3,7 +3,7 @@ package dispatcher
 import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
-	"github.com/ufy-it/go-telegram-bot/handlers/buttons"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/buttons"
 )
 
 // GlobalKeyboardType is a alias for interface{}

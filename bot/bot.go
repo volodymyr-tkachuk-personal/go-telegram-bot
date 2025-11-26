@@ -6,12 +6,12 @@ import (
 	"math/rand"
 	"net/http"
 
-	"github.com/ufy-it/go-telegram-bot/conversation"
-	"github.com/ufy-it/go-telegram-bot/dispatcher"
-	"github.com/ufy-it/go-telegram-bot/handlers"
-	"github.com/ufy-it/go-telegram-bot/jobs"
-	"github.com/ufy-it/go-telegram-bot/logger"
-	"github.com/ufy-it/go-telegram-bot/state"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/conversation"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/dispatcher"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/jobs"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/logger"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/state"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )

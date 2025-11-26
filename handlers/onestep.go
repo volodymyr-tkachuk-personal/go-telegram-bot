@@ -3,7 +3,7 @@ package handlers
 import (
 	"context"
 
-	"github.com/ufy-it/go-telegram-bot/handlers/readers"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/readers"
 )
 
 // OneStepCommandHandlerType is a type og handler that can be used as the only step of a conversation handler

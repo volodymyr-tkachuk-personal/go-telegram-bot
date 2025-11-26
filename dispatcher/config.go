@@ -1,8 +1,8 @@
 package dispatcher
 
 import (
-	"github.com/ufy-it/go-telegram-bot/conversation"
-	"github.com/ufy-it/go-telegram-bot/handlers"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/conversation"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers"
 )
 
 // Config contains configuration parameters for a new dispatcher

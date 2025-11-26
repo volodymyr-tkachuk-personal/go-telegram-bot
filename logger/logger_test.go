@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ufy-it/go-telegram-bot/logger"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/logger"
 )
 
 // TestErrorLogging verifies that logger.Error outputs message i an expected format

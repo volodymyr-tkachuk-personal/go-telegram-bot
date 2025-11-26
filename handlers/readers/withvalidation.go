@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/ufy-it/go-telegram-bot/handlers/buttons"
-	"github.com/ufy-it/go-telegram-bot/logger"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/buttons"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/logger"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
@@ -109,7 +109,7 @@ func AskTextMessageReplyWithValidation(ctx context.Context,
 	return ParseUserTextAndDataReply(reply, exit), err
 }
 
-//AskOnlyButtonReply sends message to a user and accepts only buttons
+// AskOnlyButtonReply sends message to a user and accepts only buttons
 func AskOnlyButtonReply(ctx context.Context, conversation BotConversation, message tgbotapi.Chattable, bs buttons.ButtonSet, messageOnText string) (UserTextAndDataReply, error) {
 	validator := func(update *tgbotapi.Update) (bool, string) {
 		return false, messageOnText

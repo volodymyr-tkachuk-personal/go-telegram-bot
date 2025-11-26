@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
-	. "github.com/ufy-it/go-telegram-bot/dispatcher"
+	. "github.com/volodymyr-tkachuk-personal/go-telegram-bot/dispatcher"
 )
 
 func TestRemoveKeyboard(t *testing.T) {

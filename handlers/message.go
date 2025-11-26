@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ufy-it/go-telegram-bot/handlers/readers"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/readers"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )

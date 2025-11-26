@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ufy-it/go-telegram-bot/handlers/buttons"
-	"github.com/ufy-it/go-telegram-bot/logger"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/handlers/buttons"
+	"github.com/volodymyr-tkachuk-personal/go-telegram-bot/logger"
 )
 
 // ListItem is a struct with wisible text and inner data

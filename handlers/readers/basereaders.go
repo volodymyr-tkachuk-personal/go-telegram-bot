@@ -12,10 +12,11 @@ type BotConversation interface {
 	ChatID() int64         // get current chatID
 	ConversationID() int64 // get conversation object ID
 
-	GetUpdateFromUser(ctx context.Context) (*tgbotapi.Update, bool) // read update from a user (will hang until a user sends new mupdate, or conversation is closed)
-	GetFile(fileID string) ([]byte, error)                          // get file from Telegram server
-	GetFileDirectURL(fileID string) (string, error)                 // get direct URL to the file from Telegram server
-	GetFileInfo(fileID string) (tgbotapi.File, error)               // get file info from Telegram server
+	GetUpdateFromUser(ctx context.Context) (*tgbotapi.Update, bool)                                         // read update from a user (will hang until a user sends new mupdate, or conversation is closed)
+	GetUpdateFromUserWithTimeout(ctx context.Context, timeout time.Duration) (*tgbotapi.Update, bool, bool) // read update from a user with a timeout (will hang until a user sends new update, conversation is closed, or timeout occurs)
+	GetFile(fileID string) ([]byte, error)                                                                  // get file from Telegram server
+	GetFileDirectURL(fileID string) (string, error)                                                         // get direct URL to the file from Telegram server
+	GetFileInfo(fileID string) (tgbotapi.File, error)                                                       // get file info from Telegram server
 
 	NewPhotoShare(photoFileID string, caption string) tgbotapi.PhotoConfig                      // create a message with a Photo (should be uploaded to the telegram an caption)
 	NewPhotoUpload(fileData []byte, caption string) tgbotapi.PhotoConfig                        // create a message with a Photo that uploads to the telegram an caption

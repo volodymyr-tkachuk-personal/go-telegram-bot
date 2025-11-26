@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"testing"
+	"time"
 
 	"github.com/ufy-it/go-telegram-bot/handlers"
 	"github.com/ufy-it/go-telegram-bot/handlers/readers"
@@ -113,6 +114,10 @@ func (mc *mockConversation) GetFileDirectURL(fileID string) (string, error) {
 
 func (mc *mockConversation) GetFileInfo(fileID string) (tgbotapi.File, error) {
 	return tgbotapi.File{}, nil
+}
+
+func (mc *mockConversation) GetUpdateFromUserWithTimeout(ctx context.Context, timeout time.Duration) (*tgbotapi.Update, bool, bool) {
+	return nil, false, false
 }
 
 func TestOneStepCreator(t *testing.T) {

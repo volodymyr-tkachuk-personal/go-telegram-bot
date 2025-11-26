@@ -229,6 +229,31 @@ func (c *BotConversation) GetUpdateFromUser(ctx context.Context) (*tgbotapi.Upda
 	}
 }
 
+// GetUpdateFromUser waits for the next message from a user, but no longer than timeout duration,
+// and returns pointer to the message and two flags: conversation is over, and timeout occurred
+func (c *BotConversation) GetUpdateFromUserWithTimeout(ctx context.Context, timeout time.Duration) (*tgbotapi.Update, bool, bool) {
+	select {
+	case update := <-c.updates:
+		return update, false, false
+	case <-ctx.Done():
+		if !c.canceled {
+			err := c.cancelByBot()
+			if err != nil {
+				logger.Error(err.Error())
+			}
+		}
+		return nil, true, false
+	case <-time.After(timeout):
+		return nil, false, true
+	case <-time.After(time.Duration(c.timeoutMinutes) * time.Minute):
+		err := c.cancelByBot()
+		if err != nil {
+			logger.Error(err.Error())
+		}
+		return nil, true, false
+	}
+}
+
 // ChatID returns chat ID of the conversation
 func (c *BotConversation) ChatID() int64 {
 	return c.chatID

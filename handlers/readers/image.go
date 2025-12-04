@@ -48,7 +48,7 @@ const MediaGroupAdditionalPhotoWaitTimeout = 2 * time.Second
 func GetImages(ctx context.Context, conversation BotConversation, text string, navigation buttons.ButtonSet, textOnIncorrect string) (UserImagesAndDataReply, error) {
 	msg := conversation.NewMessage(text)
 	validator := func(update *tgbotapi.Update) (bool, string) {
-		if update != nil && update.Message != nil && update.Message.MediaGroupID != "" && update.Message.Photo != nil && len(update.Message.Photo) > 0 {
+		if update != nil && update.Message != nil && update.Message.Photo != nil && len(update.Message.Photo) > 0 {
 			return true, ""
 		}
 		return false, textOnIncorrect
@@ -66,6 +66,10 @@ func GetImages(ctx context.Context, conversation BotConversation, text string, n
 	}
 	if reply != nil && reply.Message != nil && len(reply.Message.Photo) > 0 {
 		result.Images = append(result.Images, reply.Message.Photo)
+		if reply.Message.MediaGroupID == "" {
+			return result, nil
+		}
+		// wait for additional photos in the media group
 		mediaGroupID := reply.Message.MediaGroupID
 		for {
 			update, isExit, isTimeout := conversation.GetUpdateFromUserWithTimeout(ctx, MediaGroupAdditionalPhotoWaitTimeout)
